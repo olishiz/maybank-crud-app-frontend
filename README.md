@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# CRUD Application with Next.js and TailwindCSS
 
-First, run the development server:
+A simple CRUD (Create, Read, Update, Delete) application for managing books. This app is built using **Next.js**, **TailwindCSS**, and connects to a backend API for data management.
 
+## Features
+
+- **List View**: View a list of all books.
+- **Create Book**: Add a new book with details like name, description, author, and price.
+- **Edit Book**: Update book details using a dynamic route.
+- **Delete Book**: Remove a book from the list.
+- **Responsive Design**: Styled using TailwindCSS for a clean and responsive UI.
+
+---
+
+## Technologies Used
+
+### Frontend
+- **Next.js**: For server-side rendering and file-based routing.
+- **TailwindCSS**: For styling the application.
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-repo/crud-app.git
+cd crud-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the Development Server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit `http://localhost:3030` to see the app in action.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```plaintext
+src/
+├── app/                # Next.js app directory (File-based routing)
+│   ├── create/         # Route for creating books
+│   │   ├── page.tsx
+│   ├── [id]/           # Dynamic route for viewing/editing books
+│   │   ├── page.tsx
+│   ├── page.tsx        # Home page (list view)
+├── context/            # Context API for state management
+├── services/           # API service functions (Axios)
+└── styles/             # TailwindCSS global styles
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## API Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **GET /books**: Fetch all books.
+- **GET /books/:id**: Fetch a single book by ID.
+- **POST /books**: Create a new book.
+- **PUT /books/:id**: Update a book by ID.
+- **DELETE /books/:id**: Delete a book by ID.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## How to Use
+
+1. Navigate to the home page (`/`) to view the list of books.
+2. Click **"Create"** to add a new book.
+3. Click **"View/Edit"** on any book to update its details.
+4. Click **"Delete"** to remove a book.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+Developed by Oliver Sim.
