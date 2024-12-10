@@ -27,12 +27,6 @@ A simple CRUD (Create, Read, Update, Delete) application for managing books. Thi
 - Node.js (v16+)
 - npm or yarn
 
-### Clone the Repository
-```bash
-git clone https://github.com/your-repo/crud-app.git
-cd crud-app
-```
-
 ### Install Dependencies
 ```bash
 npm install
